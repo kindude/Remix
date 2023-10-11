@@ -11,6 +11,7 @@ import {
 import Navbar from "./components/common/NavBar";
 import Footer from "./components/common/Footer";
 import "app/components/styles/basic.css";
+
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
