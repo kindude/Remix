@@ -7,6 +7,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { format } from "date-fns";
 
+
 export let loader: LoaderFunction = async ({ params }) => {
     const postId = params.id; 
     if (postId === undefined) {

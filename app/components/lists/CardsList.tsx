@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "@remix-run/react";
+import "../styles/postsstyles.css"
+
 
 interface Props {
   data: Post[];
@@ -22,8 +24,9 @@ export default function CardsList(props: Props) {
   };
 
   return (
-    <div>
-      <h1>Posts</h1>
+    <div className="postsgrd">
+      <h1 className="text-center" style={{ margin: "0 auto", maxWidth: "600px" }}>post.title</h1>
+
       <div className="row cards">
         {visibleData.map((item: Post) => (
           <div className="card" key={item.id}>
@@ -31,9 +34,9 @@ export default function CardsList(props: Props) {
               <h5 className="card-title">
                 <Link to={`/${item.id}`}>{item.title}</Link>
               </h5>
-              <h6 className="card-subtitle mb-2 text-muted">{item.author}</h6>
+              <h6 className="card-subtitle">{item.author}</h6>
               <p className="card-text">{item.text}</p>
-              <h6 className="card-subtitle mb-2 text-muted">
+              <h6 className="card-subtitle">
                 {item.publication_date}
               </h6>
             </div>

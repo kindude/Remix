@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-
+import "../components/styles/styles.css";
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix App" },
@@ -9,14 +9,15 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
+    <div className="container">
+      <h1 className="YUI">Welcome <span className="GREEN" > to </span> <span className="red" >Remix</span></h1>
       <ul>
         <li>
           <a
             target="_blank"
             href="https://remix.run/tutorials/blog"
             rel="noreferrer"
+            className="QWE"
           >
             15m Quickstart Blog Tutorial
           </a>
@@ -26,12 +27,13 @@ export default function Index() {
             target="_blank"
             href="https://remix.run/tutorials/jokes"
             rel="noreferrer"
+            className="QWE"
           >
             Deep Dive Jokes App Tutorial
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
+          <a target="_blank" href="https://remix.run/docs" rel="noreferrer" className="QWE">
             Remix Docs
           </a>
         </li>
