@@ -25,7 +25,7 @@ export default function CardsList(props: Props) {
 
   return (
     <div className="postsgrd">
-      <h1 className="text-center" style={{ margin: "0 auto", maxWidth: "600px" }}>post.title</h1>
+      <h1 className="text-center" style={{ margin: "0 auto", maxWidth: "600px" }}>Posts</h1>
 
       <div className="row cards">
         {visibleData.map((item: Post) => (
