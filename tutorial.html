@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Remix Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            margin-left: 20px;
+            /* Add a margin on the left */
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin-left: -10px;
+            /* Adjust the left margin for the table */
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #333;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .image-container img {
+            width: 600px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        h2 {
+            color: #333;
+            margin: 20px 0 10px;
+
+        }
+
+        ol {
+            margin-left: 40px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+
+        .reference {
+            color: #777;
+            font-style: italic;
+        }
+
+        .reference a {
+            color: #00f;
+            text-decoration: none;
+            border-bottom: 1px dotted #00f;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Remix Tutorial</h1>
+
+    <p>Remix is a framework that is built on React JS. It simplifies the process of building full stack React
+        applications, where blending front end and back-end code is made seamless.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Remix</th>
+                <th>Next.js</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Always server-side rendered</td>
+                <td>Optional server-side rendering supported</td>
+            </tr>
+            <tr>
+                <td>No static site generation (build time pre-rendering)</td>
+                <td>Static site generation (at build time) supported</td>
+            </tr>
+            <tr>
+                <td>Always requires host that supports server-side code execution</td>
+                <td>Deployment options: Static hosting vs server-side code execution</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Before we start, we will need to ensure that we have the latest version of Node.js installed on your local
+        machine.</p>
+
+    <img src="./tutorial_images/Picture1.PNG" alt="Picture1">
+
+    <p>Once installed, navigate to the folder where you would like to create the remix application and type in the below
+        code and hit enter:</p>
+
+    <img src="./tutorial_images/Picture2.PNG" alt="Picture2">
+
+    <p>It will take a little time to start creating the application but once done you will be prompted to name your new
+        app. In this case I have simply named it ‘remix app’:</p>
+
+    <img src="./tutorial_images/Picture3.PNG" alt="Picture3">
+
+    <p>After hitting ‘enter’ again you will be prompted with two more questions about creating a new GitHub repository
+        (if GitHub is installed on your IDE) and whether to install dependencies with npm. For both these options I
+        selected ‘yes’</p>
+
+    <p>NOTE: IDE = integrated development environment, we select yes to init git repository so we can control our
+        project versions down the road, also we install dependencies that are necessary for our project.</p>
+
+    <img src="./tutorial_images/Picture4.PNG" alt="Picture4">
+
+    <p>In this example, I received an update stating that there was a new version of npm available, so I followed the
+        instructions to install this.</p>
+
+    <h2>Docker environment configuration</h2>
+
+    <p>Otherwise, we could configure a new development container. This is so the project can work on any type of
+        Operating Systems.</p>
+
+    <div class="image-container">
+        <img src="./tutorial_images/Picture5.PNG" alt="Picture5">
+        <img src="./tutorial_images/Picture6.PNG" alt="Picture6">
+        <img src="./tutorial_images/Picture7.PNG" alt="Picture7">
+    </div>
+
+    <p>After the docker container finishes its pulling process, we can install remix in the newly created workspace.</p>
+
+    <img src="./tutorial_images/Picture8.PNG" alt="Picture8">
+
+    <p>Then we agree to proceed with installation and choose our project’s name.</p>
+
+    <img src="./tutorial_images/Picture9.PNG" alt="Picture9">
+
+    <p>In our case, we’ve initialized a new git repository, but it’s not required. After that, a crucial step is to
+        install all dependencies with npm install.</p>
+
+    <img src="./tutorial_images/Picture10.PNG" alt="Picture10">
+
+    <p>Below are the new folders installed by remix:</p>
+
+    <img src="./tutorial_images/Picture11.PNG" alt="Picture11">
+
+    <p>First looking at the ‘package.json’ file, this contains a list of all the dependencies that are installed into
+        this project, there are both remix dependencies and react ones as we are still building a full stack react app.
+        There are also various scripts which can be executed build for production or to start the development server:
+    </p>
+
+    <img src="./tutorial_images/Picture12.PNG" alt="Picture12">
+
+    <p>The ‘node_modules’ folder contains all the dependencies for this project so nothing within it should be edited.
+        You can also delete this folder and bring it back by typing ‘npm install’ into the terminal. The ‘public’ folder
+        will contain any static assets for your application such as images. The app folder is where you as the developer
+        will spend most of your time as this is where you will define the react components you want to use as well as
+        your routes – the pages you want to support in this full stack application.</p>
+
+    <img src="./tutorial_images/Picture13.PNG" alt="Picture13">
+
+    <p>The ‘root.tsx’ file is the route component that is always rendered regardless of which route is loaded – this is
+        the wrapper that will be defined for all your different pages:</p>
+
+    <img src="./tutorial_images/Picture14.PNG" alt="Picture14">
+
+    <p>The two ‘entry’ .tsx files contain the code that will be executed for every request that reached the server. You
+        can edit this code if required, but not recommended unless you know what you are doing. We will keep them as
+        they are for now.</p>
+
+    <p>So, in the routes folder we have the ‘_index.tsx’ file which contains all the content for our homepage. To start
+        the server and see what the content of our homepage is we will need to run the script ‘npm run dev’ in the
+        terminal:</p>
+
+    <img src="./tutorial_images/Picture15.PNG" alt="Picture15">
+
+    <p>By holding ‘ctrl’ and clicking the link to localhost we will be presented with the below webpage:</p>
+
+    <img src="./tutorial_images/Picture16.PNG" alt="Picture16">
+
+    <p>To stop the server, use ‘ctrl + c’ in the terminal. This will create a prompt asking if you want to terminate the
+        session, type ‘y’ and hit ‘enter.</p>
+
+    <h2>First Steps</h2>
+
+    <p>For the time being we have only one route _index.tsx</p>
+
+    <img src="./tutorial_images/Picture17.PNG" alt="Picture17">
+
+    <p>To create a new route, by pressing add a new file, and attach a new file with the name we would like our route to
+        be.</p>
+
+    <img src="./tutorial_images/Picture18.PNG" alt="Picture18">
+
+    <p>Now it’s an empty file, so using basic functionality we will add an h1 tag saying “Hello from the about page.”
+    </p>
+
+    <img src="./tutorial_images/Picture19.PNG" alt="Picture19">
+
+    <p>To see the changes, we go to our browser and type in the search bar localhost:3000/about</p>
+
+    <img src="./tutorial_images/Picture20.PNG" alt="Picture20">
+
+    <h2>References</h2>
+
+    <ol>
+        <li>Academind. (2023, October 1). Remix Crash Course 2023. Retrieved from <a
+                href="https://www.youtube.com/watch?v=RBYJTop1e-g&t=1216s">Youtube</a></li>
+        <li>Remix. (2023, October 1). Remix Docs. Retrieved from <a href="https://remix.run/docs/en/mai">Remix.run</a>
+        </li>
+    </ol>
+
+    <br>
+    <a href="index.html">Go back</a>
+    <br>
+    <br>
+</body>
+
+</html>
