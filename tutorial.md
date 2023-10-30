@@ -2,7 +2,7 @@
 
 Remix is a framework that is built on React JS. It simplifies the process of building full stack React applications, where blending front end and back-end code is made seamless.
 
-|Remix |Next.js|   |   |   |
+|Remix |Next.js|   | 
 |---|---|---|---|---|
 |Always server-side rendered   | Optional server-side rendering supported   |   
 |No static site generation (build time pre-rendering)   |Static site generation (at build time) supported   |  
