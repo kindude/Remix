@@ -1,4 +1,4 @@
-# Remix Tutorial
+## Remix Tutorial
 
 Remix is a framework that is built on React JS. It simplifies the process of building full stack React applications, where blending front end and back-end code is made seamless.
 
